@@ -1,0 +1,6 @@
+requests
+pyinstaller
+# Если планируете GUI:
+# PyQt5
+# или
+# tkinter
