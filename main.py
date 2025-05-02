@@ -63,8 +63,12 @@ atexit.register(cleanup)
 
 def load_paths():
     if os.path.isfile(PATHS_FILE):
-        with open(PATHS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(PATHS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            save_paths([])   # перезапишем файл пустым списком
+            return []
     return []
 
 def save_paths(paths):
