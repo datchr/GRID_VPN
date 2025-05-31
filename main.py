@@ -2,6 +2,10 @@
 GridVPN Desktop Client - Extended GUI with Auto-Disconnect and Multiple URIs
 Python 3.13.3 поддерживается.
 '''
+
+__version__ = "1.0.0"
+
+
 # Структура проекта
 # C:\PROJECTS\GIT_HUB\GRID_VPN/
 # ├── venv/                   # виртуальное окружение
